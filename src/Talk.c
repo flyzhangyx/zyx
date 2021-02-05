@@ -67,9 +67,6 @@ int talk(LPVOID b)
         return 0;
     }
     signIN = (a->info[0] == 'Y'); //whether User had Signed in
-
-    ///************************ѭ�������û�����******************************
-
     if (signIN && a->info[0] != 'N' && !creat_check_alive)
     {
         creat_check_alive = 1;
@@ -131,7 +128,7 @@ int talk(LPVOID b)
             }
         }
     }
-        break;
+    break;
     case 68637: //REA
     {
         if (Register(a, 0) == 1)
@@ -163,7 +160,7 @@ int talk(LPVOID b)
             }
         }
     }
-        break;
+    break;
     case 68905: //RME
         break;
     case 70683: //TAA
@@ -494,65 +491,65 @@ int talk(LPVOID b)
     return 0;
 }
 
-    ///*****************************����to******************************
-    // else if (!strcmp(tag, "TAI") && signIN)
-    // {
-    //     if (Check_Id_Pwd(0, *a) != -1)
-    //     {
-    //         USER talktouser = FindOnlineUserOrIot(0, SendDataStruct.TalktoID, 0);
-    //         if (talktouser == NULL)
-    //         {
-    //             memset(&SendDataStruct, 0, sizeof(sendbag));
-    //             memset(sendbuf, 0, sizeof(sendbag));
-    //             strcpy(SendDataStruct.checkcode, "TNI"); //TA but not online
-    //             SendDataStruct.save[99] = '\n';
-    //             memcpy(sendbuf, &SendDataStruct, sizeof(sendbag));
-    //             len = send(c, sendbuf, sizeof(sendbag), 0);
-    //             if (len == SOCKET_ERROR || len == 0)
-    //             {
-    //
-    //                 closesocket(c);
-    //                 delete_out_user(*a);
-    //                 free(a);
-    //                 return 0;
-    //             }
-    //         }
-    //         else
-    //         {
-    //             //strcpy(talktouser.info,SendDataStruct.TalktoID);
-    //             ///******����Ƕ������豸CD=TA123457///******************************************************
-    //             strcpy(IoTdata, "CMD");
-    //             //strncat(IoTdata,a->USERID,11);
-    //             strncat(IoTdata, SendDataStruct.DATA, 26);
-    //             //printf("%s",SendDataStruct.DATA);
-    //             /*memcpy(sendbuf,&SendDataStruct,sizeof(SendDataStruct));*/
-    //             len = send(talktouser->USER_socket, IoTdata, 30 * sizeof(char), 0);
-    //             // free(sendbuf);
+///*****************************����to******************************
+// else if (!strcmp(tag, "TAI") && signIN)
+// {
+//     if (Check_Id_Pwd(0, *a) != -1)
+//     {
+//         USER talktouser = FindOnlineUserOrIot(0, SendDataStruct.TalktoID, 0);
+//         if (talktouser == NULL)
+//         {
+//             memset(&SendDataStruct, 0, sizeof(sendbag));
+//             memset(sendbuf, 0, sizeof(sendbag));
+//             strcpy(SendDataStruct.checkcode, "TNI"); //TA but not online
+//             SendDataStruct.save[99] = '\n';
+//             memcpy(sendbuf, &SendDataStruct, sizeof(sendbag));
+//             len = send(c, sendbuf, sizeof(sendbag), 0);
+//             if (len == SOCKET_ERROR || len == 0)
+//             {
+//
+//                 closesocket(c);
+//                 delete_out_user(*a);
+//                 free(a);
+//                 return 0;
+//             }
+//         }
+//         else
+//         {
+//             //strcpy(talktouser.info,SendDataStruct.TalktoID);
+//             ///******����Ƕ������豸CD=TA123457///******************************************************
+//             strcpy(IoTdata, "CMD");
+//             //strncat(IoTdata,a->USERID,11);
+//             strncat(IoTdata, SendDataStruct.DATA, 26);
+//             //printf("%s",SendDataStruct.DATA);
+//             /*memcpy(sendbuf,&SendDataStruct,sizeof(SendDataStruct));*/
+//             len = send(talktouser->USER_socket, IoTdata, 30 * sizeof(char), 0);
+//             // free(sendbuf);
 
-    //             if (len == SOCKET_ERROR || len == 0)
-    //             {
-    //
-    //                 closesocket(talktouser->USER_socket);
-    //                 return 0;
-    //             }
-    //             //memset(&SendDataStruct,0,sizeof(sendbag));
-    //             memset(sendbuf, 0, sizeof(sendbag));
-    //             strcpy(SendDataStruct.checkcode, "TAi");
-    //             strcpy(SendDataStruct.DATA, talktouser->info);
-    //             SendDataStruct.save[99] = '\n';
-    //             memcpy(sendbuf, &SendDataStruct, sizeof(SendDataStruct));
-    //             /*len=send(c,sendbuf,sizeof(sendbag),0);
-    //             if(len==SOCKET_ERROR||len==0)
-    //             {
-    //                 printf("\n����%I64d�˳�\n",c);
-    //                 closesocket(c);
-    //                 delete_out_user(*a);
-    //                 return 0;
-    //             }*/
-    //         }
-    //     }
-    // }
-    // else if (!strcmp(tag, TALK_TO) && signIN)
-    // {
-    // }
-    //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//
+//             if (len == SOCKET_ERROR || len == 0)
+//             {
+//
+//                 closesocket(talktouser->USER_socket);
+//                 return 0;
+//             }
+//             //memset(&SendDataStruct,0,sizeof(sendbag));
+//             memset(sendbuf, 0, sizeof(sendbag));
+//             strcpy(SendDataStruct.checkcode, "TAi");
+//             strcpy(SendDataStruct.DATA, talktouser->info);
+//             SendDataStruct.save[99] = '\n';
+//             memcpy(sendbuf, &SendDataStruct, sizeof(SendDataStruct));
+//             /*len=send(c,sendbuf,sizeof(sendbag),0);
+//             if(len==SOCKET_ERROR||len==0)
+//             {
+//                 printf("\n����%I64d�˳�\n",c);
+//                 closesocket(c);
+//                 delete_out_user(*a);
+//                 return 0;
+//             }*/
+//         }
+//     }
+// }
+// else if (!strcmp(tag, TALK_TO) && signIN)
+// {
+// }
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//

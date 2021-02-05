@@ -33,8 +33,10 @@ int initServer()
     printf("UPD%d\n",VERUPD_HASH);
     ADDUSER_HASH = DJBHash("ADD",3);
     printf("ADD%d\n",ADDUSER_HASH);
-    READDU_HASH = DJBHash("ADS",3);
+    ADSUSER_HASH = DJBHash("ADS",3);
     printf("ADS%d\n",READDU_HASH);
+    HEARTBEAT_HASH = DJBHash("HBA",3);
+    printf("RCO%d\n",READDU_HASH);
 
 
     ///***********socket≥ı ºªØ***********************

@@ -187,7 +187,10 @@ unsigned int CONTACT_HASH;///联系人码
 unsigned int REPWD_HASH;///改密
 unsigned int VERUPD_HASH ;///APP升级
 unsigned int ADDUSER_HASH;///添加用户
+unsigned int ADSUSER_HASH;///添加用户
 unsigned int READDU_HASH;///回复添加用户
+unsigned int HEARTBEAT_HASH;//HEART
+
 ///************************************************
 ///**********全局变量****************
 SOCKET server_sockfd;//TCP服务器端套接字
