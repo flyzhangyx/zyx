@@ -6,16 +6,16 @@ int talk(LPVOID b)
 #endif
 {
     int len,signIN=0,creat_check_alive=0;
-    #ifdef STPOOL
+#ifdef STPOOL
     if(ptask->task_arg==NULL)
     {
         printf("ERR");
         return 0;
     }
     CLN* a=(CLN*)ptask->task_arg;
-    #else
+#else
     CLN* a = (CLN*)b;
-    #endif
+#endif
     char IoTdata[30]="";
     char logcat[256]="";
     char Contacta[20];
@@ -76,7 +76,29 @@ int talk(LPVOID b)
         creat_check_alive=1;
         //CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)Check_alive,a,0,NULL);
     }
-
+    switch (DJBHash(tag,3))
+    {
+    case 78032://ZYX
+        break;
+    case 69858://SIA
+        break;
+    case 68637://REA
+        break;
+    case 68905://RME
+        break;
+    case 70683://TAA
+        break;
+    case 70235://STO
+        break;
+    case 72270://UPD
+        break;
+    case 50094://ADD
+        break;
+    case 50109://ADS
+        break;
+    default:
+        break;
+    }
     if(!strcmp(tag,REGISTER))
     {
 //                    strcpy(a->USERID,RecDataStruct.USERID);

@@ -9,6 +9,6 @@ unsigned int DJBHash(char* str, unsigned int len)
       hash = ((hash << 5) + hash) + (*str);
    }
 
-   return hash;
+   return hash%193400000;
 }
 /* End Of DJB Hash Function */

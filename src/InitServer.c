@@ -12,17 +12,30 @@ int initServer()
     strcpy(SIGN_OUT,"SO");//注销登录码
     strcpy(REPWD,"RP");
     ///FIll the Three CHAR full With A ：TA + A = TAA
+    time_t t;
     CHECK_HASH = DJBHash("ZYX",3);///应用进入时登陆检测是否已经注册
+    printf("ZYX%d\n",CHECK_HASH);
     SIGN_IN_HASH = DJBHash("SIA",3);///登陆码
+    printf("SIA%d\n",SIGN_IN_HASH);
     REGISTER_HASH = DJBHash("REA",3);///注册码
+    printf("REA%d\n",REGISTER_HASH);
     MESSAGE_HASH = DJBHash("RME",3);///信息发送码
+    printf("RME%d\n",MESSAGE_HASH);
     TALK_TO_HASH = DJBHash("TAA",3);///通信目标地址码
+    printf("TAA%d\n",TALK_TO_HASH);
     SIGN_OUT_HASH = DJBHash("STO",3);///注销
+    printf("STO%d\n",SIGN_OUT_HASH);
     CONTACT_HASH = DJBHash("RCO",3);///联系人码
+    printf("RCO%d\n",CONTACT_HASH);
     REPWD_HASH = DJBHash("RPA",3);
+    printf("RPA%d\n",REPWD_HASH);
     VERUPD_HASH = DJBHash("UPD",3);
+    printf("UPD%d\n",VERUPD_HASH);
     ADDUSER_HASH = DJBHash("ADD",3);
+    printf("ADD%d\n",ADDUSER_HASH);
     READDU_HASH = DJBHash("ADS",3);
+    printf("ADS%d\n",READDU_HASH);
+
 
     ///***********socket初始化***********************
     WSADATA wsaData;
